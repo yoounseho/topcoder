@@ -25,7 +25,7 @@ public:
                         {
                             //아직 부하급여가 계산이 안되었다면 계산할 필요없음.
                             if(salary[l] == 0)
-                            bCheck = true;
+                                bCheck = true;
                         }
                     }
 
