@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <time.h>
 
 using namespace std;
 
@@ -77,6 +78,9 @@ public:
 
 int main()
 {
+    clock_t start, finish;
+    start = clock();
+
     vector<string> relations_1 = {"N"};//1
     vector<string> relations_2 = {"NNYN","NNYN","NNNN","NYYN"};//5
     vector<string> relations_3 = {"NNNNNN","YNYNNY","YNNNNY","NNNNNN","YNYNNN","YNNYNN"};//17
@@ -88,5 +92,8 @@ int main()
     cout<<CorporationSalary().totalSalary(relations_3)<<endl;
     cout<<CorporationSalary().totalSalary(relations_4)<<endl;
     cout<<CorporationSalary().totalSalary(relations_5)<<endl;
+
+    finish = clock();
+    cout<<((double)finish-start )/CLOCKS_PER_SEC<<endl; 
     return 0;
 }
